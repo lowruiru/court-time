@@ -197,11 +197,15 @@ header p {
 }
 
 .view-more-btn {
-    background-color: #6c757d;
+    background-color: #ffffff; /* White background */
+    border: 2px solid #007bff; /* Blue outline matching contact button */
+    color: #007bff; /* Blue text */
 }
 
 .view-more-btn:hover {
-    background-color: #5a6268;
+    background-color: #e6f0ff; /* Light blue background on hover */
+    border: 2px solid #007bff;
+    color: #007bff;
 }
 
 .profile-container {
@@ -417,6 +421,12 @@ header p {
         font-size: 0.9rem;
     }
 
+    .view-more-btn {
+        width: 48%; /* Match other buttons in button group */
+        height: 44px; /* Match touch target size */
+        line-height: 44px;
+    }
+
     .profile-container {
         margin: 1rem;
         padding: 1rem;
@@ -526,6 +536,12 @@ header p {
         line-height: 44px;
         font-size: 0.85rem;
         margin-bottom: 0.5rem; /* Space between stacked buttons */
+    }
+
+    .view-more-btn {
+        width: 100%; /* Match other buttons */
+        height: 44px;
+        line-height: 44px;
     }
 
     .button-group {

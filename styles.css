@@ -178,10 +178,11 @@ header p {
     width: 90px; /* Standardized width */
     height: 35px; /* Standardized height */
     line-height: 35px; /* Match height */
-    text-align: center;
+    text-align: center; /* Center text */
     background-color: #007bff;
     color: #ffffff;
     transition: background-color 0.2s;
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .button:hover {
@@ -347,8 +348,6 @@ header p {
     width: 90px; /* Standardized width */
     height: 35px; /* Standardized height */
     line-height: 35px; /* Match height */
-}
-
-#feedback-form button:hover {
-    background-color: #0056b3;
+    text-align: center; /* Center text */
+    white-space: nowrap; /* Prevent text wrapping */
 }

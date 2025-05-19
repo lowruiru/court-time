@@ -63,6 +63,7 @@ header p {
     display: flex;
     flex-direction: column;
     margin: 0.25rem;
+    flex: 1 1 200px; /* Allow flex items to grow/shrink, min 200px */
 }
 
 .filter-group label {
@@ -82,6 +83,8 @@ header p {
     background-color: #ffffff;
     color: #333;
     outline: none;
+    width: 100%; /* Ensure inputs take full width of their container */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .filter-group textarea {
@@ -350,4 +353,232 @@ header p {
     line-height: 35px; /* Match height */
     text-align: center; /* Center text */
     white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Tablet Breakpoint (≤768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    header p {
+        font-size: 0.85rem;
+    }
+
+    .filters {
+        padding: 0.75rem;
+        flex-direction: column; /* Stack filters vertically */
+        gap: 0.75rem;
+    }
+
+    .filter-group {
+        flex: 1 1 100%; /* Full width for filter groups */
+    }
+
+    .sort-section {
+        padding: 0.5rem;
+        flex-direction: column; /* Stack sort options */
+        gap: 0.5rem;
+    }
+
+    .instructor-list-item {
+        flex-direction: column; /* Stack list item columns */
+        align-items: flex-start;
+        padding: 0.75rem;
+    }
+
+    .list-column {
+        padding: 0.25rem 0;
+        font-size: 0.85rem;
+    }
+
+    .time-column {
+        flex: 1; /* Allow to grow */
+    }
+
+    .button-column {
+        justify-content: flex-start;
+        width: 100%; /* Full width for buttons */
+    }
+
+    .button-group {
+        width: 100%;
+        justify-content: space-between; /* Space buttons evenly */
+    }
+
+    .button {
+        width: 48%; /* Slightly smaller to fit two buttons */
+        height: 44px; /* Minimum touch target size */
+        line-height: 44px;
+        font-size: 0.9rem;
+    }
+
+    .profile-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .instructor-card {
+        flex-direction: column; /* Stack image and content */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .instructor-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card-content {
+        text-align: center;
+    }
+
+    .card-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .schedule-table {
+        display: block; /* Allow table to scroll */
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .schedule-table th, .schedule-table td {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    #feedback-form select,
+    #feedback-form textarea {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    #feedback-form button {
+        width: 100px;
+        height: 44px; /* Minimum touch target size */
+        line-height: 44px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile Breakpoint (≤480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header p {
+        font-size: 0.8rem;
+    }
+
+    .filters {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .filter-group label {
+        font-size: 0.85rem;
+    }
+
+    .filter-group input,
+    .filter-group select,
+    .filter-group textarea {
+        font-size: 0.85rem;
+        padding: 0.3rem;
+    }
+
+    .sort-section {
+        padding: 0.3rem;
+    }
+
+    .instructors {
+        padding: 0 0.5rem;
+    }
+
+    .instructor-list-item {
+        padding: 0.5rem;
+    }
+
+    .list-column {
+        font-size: 0.8rem;
+    }
+
+    .name-column h3 {
+        font-size: 0.9rem;
+    }
+
+    .name-column .stars {
+        font-size: 0.8rem;
+    }
+
+    .level-fee-column p {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        width: 100%; /* Full width buttons on mobile */
+        height: 44px; /* Minimum touch target size */
+        line-height: 44px;
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem; /* Space between stacked buttons */
+    }
+
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 0.5rem;
+    }
+
+    .profile-container {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .instructor-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
+
+    .schedule h2, .feedback h2 {
+        font-size: 1.2rem;
+    }
+
+    .schedule-table th, .schedule-table td {
+        font-size: 0.85rem;
+        padding: 0.4rem;
+    }
+
+    .testimonial {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    #feedback-form label {
+        font-size: 0.9rem;
+    }
+
+    #feedback-form select,
+    #feedback-form textarea {
+        font-size: 0.85rem;
+        padding: 0.4rem;
+    }
+
+    #feedback-form button {
+        width: 100%; /* Full width on mobile */
+        height: 44px; /* Minimum touch target size */
+        line-height: 44px;
+        font-size: 0.85rem;
+    }
 }

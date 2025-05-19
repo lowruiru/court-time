@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Instructor Profile</h1>
+        <a href="#" onclick="history.back()" class="back-link">Back to Search Results</a>
+    </header>
+    <main>
+        <div class="profile-container">
+            <div class="instructor-profile">
+                <div class="instructor-card">
+                    <img src="https://via.placeholder.com/120" alt="Instructor" id="instructor-image">
+                    <div class="card-content">
+                        <h2 id="instructor-name"></h2>
+                        <p><strong>Gender:</strong> <span id="instructor-gender"></span></p>
+                        <p><strong>Levels:</strong> <span id="instructor-levels"></span></p>
+                        <p><strong>Fee:</strong> <span id="instructor-fee"></span> per class</p>
+                        <p class="stars"><strong>Rating:</strong> <span id="instructor-rating"></span></p>
+                        <div class="profile-description" id="instructor-description"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule">
+                <h2>Schedule (May 26 - June 1, 2025)</h2>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Duration</th>
+                            <th>Locations</th>
+                            <th>Court</th>
+                        </tr>
+                    </thead>
+                    <tbody id="schedule-body"></tbody>
+                </table>
+                <a href="https://wa.me/+6599999999?text=Hi%21%20I%20would%20like%20to%20book%20a%20class" class="button contact-btn">Contact</a>
+            </div>
+            <div class="feedback">
+                <h2>Post-Lesson Feedback</h2>
+                <div id="testimonials"></div>
+                <form id="feedback-form">
+                    <label for="feedback-rating">Your Lesson Rating</label>
+                    <select id="feedback-rating" required>
+                        <option value="">Select rating</option>
+                        <option value="1">1 ★</option>
+                        <option value="2">2 ★★</option>
+                        <option value="3">3 ★★★</option>
+                        <option value="4">4 ★★★★</option>
+                        <option value="5">5 ★★★★★</option>
+                    </select>
+                    <label for="feedback-text">Your Lesson Feedback</label>
+                    <textarea id="feedback-text" rows="4" required></textarea>
+                    <button type="submit">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="profile.js"></script>
+</body>
+</html>

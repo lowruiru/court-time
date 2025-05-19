@@ -349,14 +349,22 @@ header p {
     border: none;
     border-radius: 20px;
     font-size: 0.85rem;
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #ffffff; /* White background */
+    border: 2px solid #007bff; /* Blue outline matching contact button */
+    color: #007bff; /* Blue text */
     cursor: pointer;
     width: 90px; /* Standardized width */
     height: 35px; /* Standardized height */
     line-height: 35px; /* Match height */
     text-align: center; /* Center text */
     white-space: nowrap; /* Prevent text wrapping */
+    transition: background-color 0.2s; /* Smooth hover transition */
+}
+
+#feedback-form button:hover {
+    background-color: #e6f0ff; /* Light blue background on hover */
+    border: 2px solid #007bff;
+    color: #007bff;
 }
 
 /* Tablet Breakpoint (≤768px) */
@@ -427,6 +435,13 @@ header p {
         line-height: 44px;
     }
 
+    #feedback-form button {
+        width: 100px;
+        height: 44px; /* Minimum touch target size */
+        line-height: 44px;
+        font-size: 0.9rem;
+    }
+
     .profile-container {
         margin: 1rem;
         padding: 1rem;
@@ -466,13 +481,6 @@ header p {
     #feedback-form textarea {
         font-size: 0.9rem;
         padding: 0.5rem;
-    }
-
-    #feedback-form button {
-        width: 100px;
-        height: 44px; /* Minimum touch target size */
-        line-height: 44px;
-        font-size: 0.9rem;
     }
 }
 
@@ -544,57 +552,7 @@ header p {
         line-height: 44px;
     }
 
-    .button-group {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 0.5rem;
-    }
-
-    .profile-container {
-        margin: 0.5rem;
-        padding: 0.5rem;
-    }
-
-    .instructor-card img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .card-content h2 {
-        font-size: 1.2rem;
-    }
-
-    .card-content p {
-        font-size: 0.9rem;
-    }
-
-    .schedule h2, .feedback h2 {
-        font-size: 1.2rem;
-    }
-
-    .schedule-table th, .schedule-table td {
-        font-size: 0.85rem;
-        padding: 0.4rem;
-    }
-
-    .testimonial {
-        font-size: 0.9rem;
-        padding: 0.5rem;
-    }
-
-    #feedback-form label {
-        font-size: 0.9rem;
-    }
-
-    #feedback-form select,
-    #feedback-form textarea {
-        font-size: 0.85rem;
-        padding: 0.4rem;
-    }
-
     #feedback-form button {
         width: 100%; /* Full width on mobile */
         height: 44px; /* Minimum touch target size */
-        line-height: 44px;
-        font-size: 0.85rem;
-    }
-}
+        line-height:

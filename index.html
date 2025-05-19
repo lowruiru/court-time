@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Instructor Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tennis Instructor Booking</h1>
+        <p>Find the perfect tennis instructor for your needs!</p>
+    </header>
+    <main>
+        <div class="filters">
+            <div class="filter-group">
+                <label for="search-name">Instructors</label>
+                <input type="text" id="search-name" placeholder="Enter instructor name">
+            </div>
+            <div class="filter-group">
+                <label for="day-date">Date</label>
+                <input type="date" id="day-date" value="2025-05-19">
+            </div>
+            <div class="filter-group">
+                <label for="time">Time</label>
+                <select id="time">
+                    <option value="">Any Time</option>
+                    <option value="morning">Morning (before 12 PM)</option>
+                    <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                    <option value="evening">Evening (after 5 PM)</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="level">Level</label>
+                <select id="level">
+                    <option value="">Any Level</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </div>
+            <div class="filter-group budget">
+                <label for="budget">Budget (per class)</label>
+                <input type="range" id="budget" min="50" max="200" value="200">
+                <span id="budget-value">$200+</span>
+            </div>
+            <div class="filter-group">
+                <label for="location">Region</label>
+                <select id="location">
+                    <option value="">Any Region</option>
+                    <option value="North">North</option>
+                    <option value="North-east">North-east</option>
+                    <option value="East">East</option>
+                    <option value="Central">Central</option>
+                    <option value="South">South</option>
+                    <option value="West">West</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="court">Court</label>
+                <select id="court">
+                    <option value="">Any Court</option>
+                    <option value="instructor">Instructor provides court</option>
+                    <option value="own">Travel to my court</option>
+                </select>
+            </div>
+        </div>
+        <div class="sort-section">
+            <div class="filter-group">
+                <label for="sort">Sort By</label>
+                <select id="sort">
+                    <option value="time-asc">Time (Earliest)</option>
+                    <option value="time-desc">Time (Latest)</option>
+                    <option value="rating-asc">Rating (Low to High)</option>
+                    <option value="rating-desc">Rating (High to Low)</option>
+                    <option value="fee-asc">Fee (Low to High)</option>
+                    <option value="fee-desc">Fee (High to Low)</option>
+                </select>
+            </div>
+        </div>
+        <div class="instructors" id="instructors"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -379,6 +379,16 @@ header p {
     color: #666;
 }
 
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    padding: 1rem 0;
+    margin: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+}
+
 /* Tablet Breakpoint (≤768px) */
 @media (max-width: 768px) {
     header {
@@ -618,5 +628,10 @@ header p {
     #feedback-form textarea {
         font-size: 0.85rem;
         padding: 0.4rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
+        padding: 0.5rem 0;
     }
 }
